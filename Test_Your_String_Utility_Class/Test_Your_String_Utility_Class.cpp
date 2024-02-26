@@ -10,7 +10,7 @@ int main() {
     char test_string[40];
     cout << "enter a string to test with" << endl;
     cin >> test_string;
-    String Test = String(test_string);
+    String Test(test_string);
 
     int len = Test.Length();
     cout << "Length is : " << len << endl;
@@ -25,7 +25,7 @@ int main() {
     char other_string[40];
     cout << "enter another string to test with" << endl;
     cin >> other_string;
-    String Other = String(other_string);
+    String Other(other_string);
 
     bool equal;
     equal = Test.EqualTo(Other);
@@ -34,12 +34,12 @@ int main() {
     char first_append_string[40];
     cout << "enter another string to test with" << endl;
     cin >> first_append_string;
-    String First_Append = String(first_append_string);
+    String First_Append(first_append_string);
 
     char second_append_string[40];
     cout << "enter another string to test with" << endl;
     cin >> second_append_string;
-    String Second_Append = String(second_append_string);
+    String Second_Append(second_append_string);
 
     First_Append.Append(Second_Append);
     cout << "Appending the second string to the first string results : " << First_Append.CStr() << endl;
@@ -47,12 +47,12 @@ int main() {
     char first_prepend_string[40];
     cout << "enter another string to test with" << endl;
     cin >> first_prepend_string;
-    String First_Prepend = String(first_prepend_string);
+    String First_Prepend(first_prepend_string);
 
     char second_prepend_string[40];
     cout << "enter another string to test with" << endl;
     cin >> second_prepend_string;
-    String Second_Prepend = String(second_prepend_string);
+    String Second_Prepend(second_prepend_string);
 
     First_Prepend.Prepend(Second_Prepend);
     cout << "Prepending the second string to the first string results : " << First_Prepend.CStr() << endl;
@@ -60,7 +60,7 @@ int main() {
     char upper_string[40];
     cout << "enter a string with uppercase to test with" << endl;
     cin >> upper_string;
-    String Upper = String(upper_string);
+    String Upper(upper_string);
 
     Upper.ToLower();
     cout << "The string in all lowercase is : " << Upper.CStr() << endl;
@@ -68,7 +68,7 @@ int main() {
     char lower_string[40];
     cout << "enter a string with lowercase to test with" << endl;
     cin >> lower_string;
-    String Lower = String(lower_string);
+    String Lower(lower_string);
 
     Lower.ToUpper();
     cout << "The string in all uppercase is : " << Lower.CStr() << endl;
@@ -76,12 +76,12 @@ int main() {
     char find_in_string[40];
     cout << "enter a string with another string inside it" << endl;
     cin >> find_in_string;
-    String Find_In = String(find_in_string);
+    String Find_In(find_in_string);
 
     char find_string[40];
     cout << "enter the string inside of the pervious" << endl;
     cin >> find_string;
-    String Find = String(find_string);
+    String Find(find_string);
 
     int location;
     location = Find_In.Find(Find);
@@ -106,17 +106,17 @@ int main() {
     char original_string[40];
     cout << "enter a string with another string in it" << endl;
     cin >> original_string;
-    String Original = String(original_string);
+    String Original(original_string);
 
     char find_string_2[40];
     cout << "enter the string that was in the previous" << endl;
     cin >> find_string_2;
-    String Find_2 = String(find_string_2);
+    String Find_2(find_string_2);
 
     char replace_string[40];
     cout << "enter a string to replace the find string" << endl;
     cin >> replace_string;
-    String Replace = String(replace_string);
+    String Replace(replace_string);
 
     Original.Replace(Find, Replace);
     cout << "The string after the find string is replaced is : " << Original.CStr() << endl;
@@ -129,12 +129,12 @@ int main() {
     char first_equality_string[40];
     cout << "enter a string to test with" << endl;
     cin >> first_equality_string;
-    String Equal = String(first_equality_string);
+    String Equal(first_equality_string);
 
     char second_equality_string[40];
     cout << "enter a string to test with" << endl;
     cin >> second_equality_string;
-    String Equal_2 = String(second_equality_string);
+    String Equal_2(second_equality_string);
 
     bool equality;
     equality = Equal.operator==(Equal_2);
@@ -146,12 +146,12 @@ int main() {
     char first_assignment_string[40];
     cout << "enter a string to test with" << endl;
     cin >> first_assignment_string;
-    String Assign = String(first_assignment_string);
+    String Assign(first_assignment_string);
 
     char second_assignment_string[40];
     cout << "enter a string to test with" << endl;
     cin >> second_assignment_string;
-    String Assign_2 = String(second_assignment_string);
+    String Assign_2(second_assignment_string);
 
     Assign.operator=(Assign_2);
     cout << "The value assigned was : " << Assign.CStr() << endl;
@@ -160,7 +160,7 @@ int main() {
     char index_string[40];
     cout << "enter a string to test with" << endl;
     cin >> index_string;
-    String Index = String(index_string);
+    String Index(index_string);
 
     int index_operator;
     cout << "enter an index to check" << endl;
@@ -170,12 +170,12 @@ int main() {
     char greater_string[40];
     cout << "enter a string to test with" << endl;
     cin >> greater_string;
-    String Greater = String(greater_string);
+    String Greater(greater_string);
 
     char less_string[40];
     cout << "enter a string to test with" << endl;
     cin >> less_string;
-    String Less = String(less_string);
+    String Less(less_string);
 
     bool less_than;
     bool greater_than;
