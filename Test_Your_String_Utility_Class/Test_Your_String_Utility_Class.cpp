@@ -29,7 +29,7 @@ int main() {
 
     bool equal;
     equal = Test.EqualTo(Other);
-    cout << "The two strings are equal? " << equal << endl;
+    cout << boolalpha << "The two strings are equal? " << equal << noboolalpha << endl;
 
     char first_append_string[40];
     cout << "enter another string to test with" << endl;
@@ -118,7 +118,7 @@ int main() {
     cin >> replace_string;
     String Replace(replace_string);
 
-    Original.Replace(Find, Replace);
+    Original.Replace(Find_2, Replace);
     cout << "The string after the find string is replaced is : " << Original.CStr() << endl;
 
     String Read_Write = String();
@@ -138,10 +138,10 @@ int main() {
 
     bool equality;
     equality = Equal.operator==(Equal_2);
-    cout << "The two strings are equal? : " << equality << endl;
+    cout << boolalpha << "The two strings are equal? : " << equality << noboolalpha << endl;
 
     equality = Equal.operator!=(Equal_2);
-    cout << "The two strings are not equal? : " << equality << endl;
+    cout << boolalpha << "The two strings are not equal? : " << equality << noboolalpha << endl;
 
     char first_assignment_string[40];
     cout << "enter a string to test with" << endl;
@@ -181,8 +181,8 @@ int main() {
     bool greater_than;
     less_than = Greater.operator<(Less);
     greater_than = Greater.operator>(Less);
-    cout << "The first string entered is less than the second? : " << less_than << endl;
-    cout << "The first string entered is greater than the second? : " << greater_than << endl;
+    cout << boolalpha << "The first string entered is less than the second? : " << less_than << noboolalpha << endl;
+    cout << boolalpha << "The first string entered is greater than the second? : " << greater_than << noboolalpha << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
